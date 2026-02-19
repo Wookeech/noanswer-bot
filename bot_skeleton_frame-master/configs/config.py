@@ -1,0 +1,45 @@
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+from typing import List
+
+SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN")
+SLACK_BOT_TOKEN_USER = os.environ.get("SLACK_BOT_TOKEN_USER")
+SLACK_APP_TOKEN = os.environ.get("SLACK_APP_TOKEN")
+SLACK_BOT_USER_ID = None
+
+SLACK_TEAM_ID = ""
+SLACK_WORKSPACE = os.environ.get("SLACK_WORKSPACE")
+LOGS_SLACK_CHANNEL = os.environ.get("LOGS_SLACK_CHANNEL")
+SLACK_CHANNEL_ID = os.environ.get("SLACK_CHANNEL_ID")
+
+SLACK_CREATE_MSG_IN_SEPARATE_CHANNEL = os.environ.get("SLACK_CREATE_MSG_IN_SEPARATE_CHANNEL", "false").lower() == "true"
+SLACK_ALWAYS_CREATE_MSG_IN_RH_CHANNEL = os.environ.get("SLACK_ALWAYS_CREATE_MSG_IN_RH_CHANNEL", "false").lower() == "true"
+CREATE_GOOGLE_MEET_LINK = os.environ.get("CREATE_GOOGLE_MEET_LINK", "false").lower() == "true"
+UPDATES_LOGS_IN_RH_CHANNEL_PRIVATE = os.environ.get("UPDATES_LOGS_IN_RH_CHANNEL_PRIVATE", "false").lower() == "true"
+UPDATES_SEND_STATUSES_ENABLED = os.environ.get("UPDATES_SEND_STATUSES_ENABLED", "false").lower() == "true"
+SHOW_STATUSES_BUTTONS = os.environ.get("SHOW_STATUSES_BUTTONS", "false").lower() == "true"
+SHOW_OPTIONS_BUTTON = os.environ.get("SHOW_OPTIONS_BUTTON", "false").lower() == "true"
+SHOW_OPTIONS_IN_MODAL = os.environ.get("SHOW_OPTIONS_IN_MODAL", "false").lower() == "true"
+SLACK_SOKET_MODE_ENABLED = os.environ.get("SLACK_SOKET_MODE_ENABLED", "false").lower() == "true"
+
+SLACK_USERS_NOTIFY_P1 = os.environ.get("SLACK_USERS_NOTIFY_P1", "[]")
+SLACK_USERS_NOTIFY_P2 = os.environ.get("SLACK_USERS_NOTIFY_P2", "[]")
+SLACK_USERS_NOTIFY = os.environ.get("SLACK_USERS_NOTIFY", "[]")
+
+TIMELINE_TEMPLATE = os.environ.get("TIMELINE_TEMPLATE", "")
+UPDATES_REACTIONS = os.environ.get("UPDATES_REACTIONS", "[]")
+UPDATES_ALLOWED_GROUPS = os.environ.get("UPDATES_ALLOWED_GROUPS", "[]")
+UPDATES_STATUSES_BUTTONS = os.environ.get("UPDATES_STATUSES_BUTTONS", "[]")
+NOTIFY_UPDATES_PERIOD = os.environ.get("NOTIFY_UPDATES_PERIOD", "{}")
+IN_PROGRESS_STATUSES = os.environ.get("IN_PROGRESS_STATUSES", "[]")
+ALLOW_ARCHIVE_STATUSES = os.environ.get("ALLOW_ARCHIVE_STATUSES", "[]")
+POSTFACTUM_MESSAGE = os.environ.get("POSTFACTUM_MESSAGE", "")
+ITSEC_INCIDENT_SLACK_OPTIONS1 = os.environ.get("ITSEC_INCIDENT_SLACK_OPTIONS1", "{}")
+ITSEC_INCIDENT_SLACK_OPTIONS = os.environ.get("ITSEC_INCIDENT_SLACK_OPTIONS", "{}")
+ITSEC_INCIDENT_SLACK_NOTIFY_GROUPS = os.environ.get("ITSEC_INCIDENT_SLACK_NOTIFY_GROUPS", "[]")
+ITSEC_INCIDENT_SLACK_NOTIFY_USERS = os.environ.get("ITSEC_INCIDENT_SLACK_NOTIFY_USERS", "[]")
+ISSUE_COMPONENTS_NOT_CREATE_SLACK_CHANNEL = os.environ.get("ISSUE_COMPONENTS_NOT_CREATE_SLACK_CHANNEL", "[]")
+ISSUE_COMPONENTS_NOT_CREATE_SLACK_POST = os.environ.get("ISSUE_COMPONENTS_NOT_CREATE_SLACK_POST", "[]")
