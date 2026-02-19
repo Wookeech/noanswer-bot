@@ -214,8 +214,8 @@ async def handle_message_events(body, client: WebClient, logger):
                 #                         update_tg_message(samodelkin_bot, tg_msg_id, tg_channel_id, metadata_upd)
 
 async def handle_reaction_added_events(body, logger):
-    pass
+    print(body)
 
 async def handle_reaction_removed_events(body, logger):
-    pass
+    print(body)
 
